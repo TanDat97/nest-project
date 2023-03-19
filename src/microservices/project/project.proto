@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package project;
+
+service ProjectService {
+  rpc FindOne (ProjectById) returns (Project) {}
+}
+
+message ProjectById {
+  int32 id = 1;
+}
+
+message Project {
+  int32 id = 1;
+  string name = 2;
+}
